@@ -87,6 +87,7 @@ header {
   }
 
   .nav-categorias {
+    position: relative;
     width: 100%;
     border-bottom: 1px solid #f0f0f0;
     border-top: 1px solid #f0f0f0;
@@ -99,7 +100,7 @@ header {
     ul {
       list-style: none;
       margin: 0;
-      padding: 0.6rem 0rem;
+      padding: 0.6rem 0rem 1rem;
       white-space: nowrap;
 
       li {
@@ -110,13 +111,24 @@ header {
         border-right: 2px solid #f0f0f0;
 
         &:first-child {
-          padding-left: $gutter;
+          margin-left: 1rem;
         }
 
         &:last-child {
-          padding-right: $gutter;
+          margin-right: 1rem;
+          border-right: 0;
         }
       }
+    }
+
+    .indicador {
+      position: absolute;
+      bottom: .7rem;
+      width: 1.8rem;
+      height: 5px;
+      background-color: $primary;
+      border-radius: 5px;
+      transform: translateX(-50%);
     }
   }
 }
@@ -150,8 +162,8 @@ main {
 
         &__img {
           margin-right: 1rem;
-          flex: 1 0 30%;
-          max-height: 150px;
+          flex: 1 0 35%;
+          max-height: 140px;
           border-radius: 15px;
           overflow: hidden;
 
@@ -167,7 +179,7 @@ main {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          flex: 1 0 70%;
+          flex: 1 0 65%;
 
           h3.nome {
             color: $primary;

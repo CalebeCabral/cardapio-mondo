@@ -401,6 +401,7 @@ header {
         font-weight: 300;
         color: #707070; }
   header .nav-categorias {
+    position: relative;
     width: 100%;
     border-bottom: 1px solid #f0f0f0;
     border-top: 1px solid #f0f0f0;
@@ -410,7 +411,7 @@ header {
     header .nav-categorias ul {
       list-style: none;
       margin: 0;
-      padding: 0.6rem 0rem;
+      padding: 0.6rem 0rem 1rem;
       white-space: nowrap; }
       header .nav-categorias ul li {
         color: #E29930;
@@ -419,9 +420,18 @@ header {
         padding: 0.4rem 1rem;
         border-right: 2px solid #f0f0f0; }
         header .nav-categorias ul li:first-child {
-          padding-left: 2rem; }
+          margin-left: 1rem; }
         header .nav-categorias ul li:last-child {
-          padding-right: 2rem; }
+          margin-right: 1rem;
+          border-right: 0; }
+    header .nav-categorias .indicador {
+      position: absolute;
+      bottom: .7rem;
+      width: 1.8rem;
+      height: 5px;
+      background-color: #E29930;
+      border-radius: 5px;
+      transform: translateX(-50%); }
 
 main {
   background-color: #f0f0f0;
@@ -443,8 +453,8 @@ main {
         border: 0; }
       main .categoria__opcoes .opcao__img {
         margin-right: 1rem;
-        flex: 1 0 30%;
-        max-height: 150px;
+        flex: 1 0 35%;
+        max-height: 140px;
         border-radius: 15px;
         overflow: hidden; }
         main .categoria__opcoes .opcao__img img {
@@ -456,7 +466,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        flex: 1 0 70%; }
+        flex: 1 0 65%; }
         main .categoria__opcoes .opcao__info h3.nome {
           color: #E29930;
           font-size: 1em; }
