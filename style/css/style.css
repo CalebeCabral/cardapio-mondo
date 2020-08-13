@@ -319,6 +319,9 @@ body, html {
 h1, h2, h3, p {
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 @font-face {
   font-family: Epilogue;
   src: url(../../assets/fonts/Epilogue-Regular.ttf); }
@@ -412,14 +415,15 @@ header {
     header .nav-categorias ul {
       list-style: none;
       margin: 0;
-      padding: 0.8rem 0rem;
+      padding: 0.8rem 0rem 1rem;
       white-space: nowrap; }
       header .nav-categorias ul li {
-        color: #E29930;
-        font-weight: 500;
         display: inline-block;
-        padding: 0.2rem 1rem;
         border-right: 2px solid #f0f0f0; }
+        header .nav-categorias ul li a {
+          color: #E29930;
+          font-weight: 500;
+          padding: 0.2rem 1rem; }
         header .nav-categorias ul li:first-child {
           margin-left: 1rem; }
         header .nav-categorias ul li:last-child {
@@ -436,47 +440,50 @@ header {
 
 main {
   background-color: #f0f0f0;
-  padding: 1rem 2rem; }
-  main .categoria h2 {
-    font-size: 1.375em;
-    color: #E29930;
-    margin-bottom: 1.5rem; }
-  main .categoria__opcoes {
-    list-style: none;
-    padding: 0rem; }
-    main .categoria__opcoes .opcao {
-      display: flex;
-      align-items: stretch;
-      margin-top: 1.5rem;
-      padding: 0rem 0rem 1.5rem;
-      border-bottom: 1px solid #E29930; }
-      main .categoria__opcoes .opcao:last-child {
-        border: 0; }
-      main .categoria__opcoes .opcao__img {
-        margin-right: 1rem;
-        flex: 1 0 35%;
-        max-height: 140px;
-        border-radius: 15px;
-        overflow: hidden; }
-        main .categoria__opcoes .opcao__img img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center; }
-      main .categoria__opcoes .opcao__info {
+  padding: 0.5rem 2rem; }
+  main .categoria {
+    padding: 1rem 0rem; }
+    main .categoria h2 {
+      font-size: 1.375em;
+      color: #E29930;
+      margin-bottom: 1.5rem; }
+    main .categoria__opcoes {
+      list-style: none;
+      padding: 0rem; }
+      main .categoria__opcoes .opcao {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        flex: 1 0 65%; }
-        main .categoria__opcoes .opcao__info h3.nome {
-          color: #E29930;
-          font-size: 1em; }
-        main .categoria__opcoes .opcao__info p.desc {
-          color: #707070;
-          font-size: 0.813em; }
-        main .categoria__opcoes .opcao__info h3.preco {
-          color: #E29930;
-          font-size: 1.125em; }
+        align-items: stretch;
+        margin-top: 1.5rem;
+        padding: 0rem 0rem 1.5rem;
+        border-bottom: 1px solid #E29930; }
+        main .categoria__opcoes .opcao:last-child {
+          border: 0;
+          padding-bottom: 0; }
+        main .categoria__opcoes .opcao__img {
+          margin-right: 1rem;
+          flex: 1 0 35%;
+          max-height: 140px;
+          border-radius: 15px;
+          overflow: hidden; }
+          main .categoria__opcoes .opcao__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center; }
+        main .categoria__opcoes .opcao__info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          flex: 1 0 65%; }
+          main .categoria__opcoes .opcao__info h3.nome {
+            color: #E29930;
+            font-size: 1em; }
+          main .categoria__opcoes .opcao__info p.desc {
+            color: #707070;
+            font-size: 0.813em; }
+          main .categoria__opcoes .opcao__info h3.preco {
+            color: #E29930;
+            font-size: 1.125em; }
 
 footer {
   padding: 1.5rem 3rem;
@@ -485,4 +492,5 @@ footer {
   font-size: 0.875em;
   font-weight: 500; }
   footer a {
-    color: #fff; }
+    color: #fff;
+    text-decoration: underline; }

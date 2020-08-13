@@ -101,15 +101,18 @@ header {
     ul {
       list-style: none;
       margin: 0;
-      padding: 0.8rem 0rem;
+      padding: 0.8rem 0rem 1rem;
       white-space: nowrap;
 
       li {
-        color: $primary;
-        font-weight: 500;
         display: inline-block;
-        padding: 0.2rem 1rem;
         border-right: 2px solid #f0f0f0;
+
+        a {
+          color: $primary;
+          font-weight: 500;
+          padding: 0.2rem 1rem;
+        }
 
         &:first-child {
           margin-left: 1rem;
@@ -136,9 +139,10 @@ header {
 
 main {
   background-color: #f0f0f0;
-  padding: 1rem $gutter;
+  padding: .5rem $gutter;
 
   .categoria {
+    padding: 1rem 0rem;
 
     h2 {
       font-size: $fs22;
@@ -159,6 +163,7 @@ main {
 
         &:last-child {
           border: 0;
+          padding-bottom: 0;
         }
 
         &__img {
@@ -211,5 +216,6 @@ footer {
 
   a {
     color: #fff;
+    text-decoration: underline;
   }
 }
