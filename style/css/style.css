@@ -306,19 +306,41 @@ template {
 [hidden] {
   display: none; }
 
+/**
+ * CUSTOM
+ */
 * {
   box-sizing: border-box; }
 
 body, html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Epilogue, Helvetica, sans-serif;
   width: 100%; }
 
 h1, h2, h3, p {
   margin: 0; }
 
-/**
- * CUSTOM
- */
+@font-face {
+  font-family: Epilogue;
+  src: url(../../assets/fonts/Epilogue-Regular.ttf); }
+
+@font-face {
+  font-family: Epilogue;
+  src: url(../../assets/fonts/Epilogue-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: Epilogue;
+  src: url(../../assets/fonts/Epilogue-Medium.ttf);
+  font-weight: 500; }
+
+@font-face {
+  font-family: Epilogue;
+  src: url(../../assets/fonts/Epilogue-ExtraBold.ttf);
+  font-weight: 900; }
+
+body {
+  font-size: 18px; }
+
 header {
   width: 100%; }
   header .banner {
@@ -342,6 +364,7 @@ header {
       object-position: center; }
   header .info {
     width: 100%;
+    margin-top: -2.2rem;
     padding: 1rem 2rem;
     display: flex;
     align-items: center; }
@@ -349,36 +372,49 @@ header {
       flex: 1;
       position: relative;
       margin-right: 1rem;
-      margin-top: -2.5rem;
       background-color: #fff;
       border-radius: 50%;
       overflow: hidden;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13); }
+      header .info__logo:before {
+        content: "";
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 100%; }
       header .info__logo img {
-        width: 90%; }
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
     header .info__text {
-      flex: 2;
-      margin-top: -2.5rem; }
+      flex: 2; }
       header .info__text h1 {
         font-size: 1.375em;
+        font-weight: 900;
         color: #E29930;
-        margin-bottom: .5rem; }
+        margin-bottom: .2rem; }
       header .info__text h2 {
         font-size: 1em;
+        font-weight: 300;
         color: #707070; }
   header .nav-categorias {
+    width: 100%;
     border-bottom: 1px solid #f0f0f0;
-    border-top: 1px solid #f0f0f0; }
+    border-top: 1px solid #f0f0f0;
+    overflow-x: auto; }
+    header .nav-categorias::-webkit-scrollbar {
+      height: 0; }
     header .nav-categorias ul {
       list-style: none;
       margin: 0;
       padding: 0.6rem 0rem;
-      white-space: nowrap;
-      overflow-x: auto; }
-      header .nav-categorias ul::-webkit-scrollbar {
-        height: 0; }
+      white-space: nowrap; }
       header .nav-categorias ul li {
         color: #E29930;
+        font-weight: 500;
         display: inline-block;
         padding: 0.4rem 1rem;
         border-right: 2px solid #f0f0f0; }
@@ -386,3 +422,56 @@ header {
           padding-left: 2rem; }
         header .nav-categorias ul li:last-child {
           padding-right: 2rem; }
+
+main {
+  background-color: #f0f0f0;
+  padding: 1rem 2rem; }
+  main .categoria h2 {
+    font-size: 1.375em;
+    color: #E29930;
+    margin-bottom: 1.5rem; }
+  main .categoria__opcoes {
+    list-style: none;
+    padding: 0rem; }
+    main .categoria__opcoes .opcao {
+      display: flex;
+      align-items: stretch;
+      margin-top: 1.5rem;
+      padding: 0rem 0rem 1.5rem;
+      border-bottom: 1px solid #E29930; }
+      main .categoria__opcoes .opcao:last-child {
+        border: 0; }
+      main .categoria__opcoes .opcao__img {
+        margin-right: 1rem;
+        flex: 1 0 30%;
+        max-height: 150px;
+        border-radius: 15px;
+        overflow: hidden; }
+        main .categoria__opcoes .opcao__img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center; }
+      main .categoria__opcoes .opcao__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 1 0 70%; }
+        main .categoria__opcoes .opcao__info h3.nome {
+          color: #E29930;
+          font-size: 1em; }
+        main .categoria__opcoes .opcao__info p.desc {
+          color: #707070;
+          font-size: 0.813em; }
+        main .categoria__opcoes .opcao__info h3.preco {
+          color: #E29930;
+          font-size: 1.125em; }
+
+footer {
+  padding: 1.5rem 3rem;
+  background-color: #303030;
+  color: #fff !important;
+  font-size: 0.875em;
+  font-weight: 500; }
+  footer a {
+    color: #fff; }

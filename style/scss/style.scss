@@ -1,11 +1,10 @@
+
 /**
  * NORMALIZE
  */
-@import "normalize";
-@import "reboot";
-@import "variables";
+@import "../../node_modules/normalize.css/normalize";
 
 /**
  * CUSTOM
  */
-@import "main";
+@import "main.scss";
