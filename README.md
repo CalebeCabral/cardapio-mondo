@@ -1,1 +1,1 @@
-# Wordpress theme template with Scss
+# Catálogo Mondo Publi
