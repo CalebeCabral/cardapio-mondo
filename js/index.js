@@ -44,7 +44,7 @@ const navIndicator = {
 const navPosition = {
   navOffset: $("nav.nav-categorias")[0].offsetTop,
   stickyNav() {
-    if (window.pageYOffset > this.navOffset) {
+    if ($("html").scrollTop() > this.navOffset) {
       $("header").addClass("fixed-nav-categorias");
     } else {
       $("header").removeClass("fixed-nav-categorias");
