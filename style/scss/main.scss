@@ -2,8 +2,16 @@
 @import "reboot";
 @import "fonts";
 
+html {
+  // scroll-behavior: smooth;
+}
+
 body {
   font-size: 18px;
+
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
 }
 
 header {
@@ -31,6 +39,19 @@ header {
       left: 0;
       object-fit: cover;
       object-position: center;
+    }
+  }
+
+  &.fixed-nav-categorias {
+
+    .info {
+      margin-bottom: 50px;
+    }
+
+    .nav-categorias {
+      position: fixed;
+      top: 0;
+      z-index: 99;
     }
   }
 
@@ -133,6 +154,7 @@ header {
       background-color: $primary;
       border-radius: 5px;
       transform: translateX(-50%);
+      transition: left .2s .2s;
     }
   }
 }
@@ -142,7 +164,13 @@ main {
   padding: .5rem $gutter;
 
   .categoria {
+    position: relative;
     padding: 1rem 0rem;
+
+    .cat-anchor {
+      position: absolute;
+      top: -50px;
+    }
 
     h2 {
       font-size: $fs22;
